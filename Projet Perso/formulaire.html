@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
-    <link rel="stylesheet" href="./CSS/css.css">
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
     <div class="bodyidentification">
     <div class="container">
     <h1>Identification</h1>
-    <form class="Formulaire">
+    <!-- Formulaire de connexion -->
+    <form class="FormConnexion">
         <label class="ConnexionForm" for="Mail">Adresse Mail:</label>
         <input class="ConnexionInput" type="email" id="mail" name="Mail" required>
 
@@ -20,11 +21,37 @@
         <div class="boutonform">
             <input class="bouton" type="submit" id="connexion" value="connexion">
 
-            <input class="bouton" type="button" id="redirectioninscription" value="inscriptionOe">
+            <input class="bouton" type="button" id="redirectioninscription" value="inscription">
+        </div>
+    </form>
+    <!-- Formulaire d'inscription -->
+    <form class="Hidden FormInscription">
+        <label class="InscriptionForm" for="Prénom">Prénom:</label>
+        <input class="InscriptionInput" type="text" id="prenom" name="Prénom" required>
+
+        <label class="InscriptionForm" for="Nom">Nom:</label>
+        <input class="InscriptionInput" type="text" id="nom" name="Nom" required>
+
+        <label class="InscriptionForm" for="Téléphone">Téléphone (optionnel):</label>
+        <input class="InscriptionInput" type="tel" id="telephone" name="Téléphone">
+
+        <label class="InscriptionForm" for="Email">Adresse Mail:</label>
+        <input class="InscriptionInput" type="email" id="email" name="Email" required>
+
+        <label class="InscriptionForm" for="MdP">Mot de Passe</label>
+        <input class="InscriptionInput" type="password" id="motdepasse" name="MdP" required>
+
+        <label class="InscriptionForm" for="MdPConfirm">Confirmer Mot de Passe</label>
+        <input class="InscriptionInput" type="password" id="motdepasseC" name="MdPConfirm" required>
+
+        <div class="boutonform">
+            <input class="bouton" type="submit" id="inscription" value="inscription">
+
+            <input class="bouton" type="button" id="redirectionconnexion" value="connexion">
         </div>
     </form>
     </div>
     </div>
-    <script src="./JS/js.js"></script>
+    <script src="./JS/script.js"></script>
 </body>
 </html>
