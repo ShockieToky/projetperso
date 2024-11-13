@@ -8,6 +8,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background-image: url("/src/test.png");
 }
 
 h1{
@@ -17,6 +18,10 @@ h1{
     background: radial-gradient(circle, rgba(209,171,30,1) 0%, rgba(241,45,45,1) 100%);
 }
 
+.accueil{
+    margin-right: 95%;
+}
+
 .container{
     max-width: 400px;
     margin: auto;
@@ -24,8 +29,8 @@ h1{
     /* background-color: grey; */
 }
 
-.FormConnexion{
-    background-color: grey;
+#FormConnexion{
+    background-color: black;
     margin-top: 25%;
     padding-bottom: 15px;
 }
@@ -56,8 +61,8 @@ h1{
     display: none;
 }
 
-.FormInscription{
-    background-color: grey;
+#FormInscription{
+    background-color: black;
     margin-top: 25%;
     padding-bottom: 15px;
 }

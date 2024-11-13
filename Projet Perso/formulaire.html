@@ -8,10 +8,13 @@
 </head>
 <body>
     <div class="bodyidentification">
+    <div class="accueil">
+        <button id="retour" onclick="window.location.href='/accueil.html';">Retour Accueil </button>
+    </div>
     <div class="container">
     <h1>Identification</h1>
     <!-- Formulaire de connexion -->
-    <form class="FormConnexion">
+    <form id="FormConnexion">
         <label class="ConnexionForm" for="Mail">Adresse Mail:</label>
         <input class="ConnexionInput" type="email" id="mail" name="Mail" required>
 
@@ -25,7 +28,7 @@
         </div>
     </form>
     <!-- Formulaire d'inscription -->
-    <form class="Hidden FormInscription">
+    <form class="Hidden" id="FormInscription">
         <label class="InscriptionForm" for="Prénom">Prénom:</label>
         <input class="InscriptionInput" type="text" id="prenom" name="Prénom" required>
 
@@ -49,6 +52,7 @@
 
             <input class="bouton" type="button" id="redirectionconnexion" value="connexion">
         </div>
+        <div id="message"></div>
     </form>
     </div>
     </div>
