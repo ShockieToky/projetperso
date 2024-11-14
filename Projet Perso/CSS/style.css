@@ -1,3 +1,5 @@
+/* CSS du Formulaire */
+
 .bodyidentification{
     text-align: center;
     margin: 0;
@@ -22,11 +24,10 @@ h1{
     margin-right: 95%;
 }
 
-.container{
+.containerForm{
     max-width: 400px;
     margin: auto;
     padding: 20px;
-    /* background-color: grey; */
 }
 
 #FormConnexion{
@@ -77,4 +78,73 @@ h1{
 .InscriptionInput{
     font-size: 25px;
     border: 5px double blue;
+}
+
+/* CSS de soumisson d'anecdote */
+
+.bodysub{
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+}
+
+.Culture{
+    background-image: url("/src/chichen-itza-7861103_1920.jpg");
+}
+
+.Animaux{
+    background-image: url("/src/lemurs-1010643_1920.jpg");
+}
+
+.Sports{
+    background-image: url("/src/stadium-4181150_1920.jpg");
+}
+
+.containerSub{
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+#FormSub{
+    margin-top: 50%;
+    padding-bottom: 15px;
+}
+
+.SubForm{
+    display: block;
+    padding: 10px;
+    font-size: 25px;
+    color: rgb(13, 149, 240);
+}
+
+.SubInput{
+    font-size: 15px;
+    border: 5px double blue;
+}
+
+#anecdote{
+    width: 550px;
+    height: 120px;
+    resize: none;
+    font-size: 14px;
+}
+
+#source{
+    margin-top: 10px;
+    width: 350px;
+    text-align: center;
+}
+
+#request{
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
+    <title>Identification</title>
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="accueil">
         <button id="retour" onclick="window.location.href='/accueil.html';">Retour Accueil </button>
     </div>
-    <div class="container">
+    <div class="containerForm">
     <h1>Identification</h1>
     <!-- Formulaire de connexion -->
     <form id="FormConnexion">
@@ -36,13 +36,13 @@
         <input class="InscriptionInput" type="text" id="nom" name="Nom" required>
 
         <label class="InscriptionForm" for="Téléphone">Téléphone (optionnel):</label>
-        <input class="InscriptionInput" type="tel" id="telephone" name="Téléphone">
+        <input class="InscriptionInput" type="tel" id="telephone" name="Téléphone" pattern="[0-9]{10}">
 
         <label class="InscriptionForm" for="Email">Adresse Mail:</label>
-        <input class="InscriptionInput" type="email" id="email" name="Email" required>
+        <input class="InscriptionInput" type="email" id="email" name="Email" placeholder="exemple@exemple.com" required>
 
-        <label class="InscriptionForm" for="MdP">Mot de Passe</label>
-        <input class="InscriptionInput" type="password" id="motdepasse" name="MdP" required>
+        <label class="InscriptionForm" for="MdP">Mot de Passe (8 caractères minimum)</label>
+        <input class="InscriptionInput" type="password" id="motdepasse" name="MdP" minlength="8" required>
 
         <label class="InscriptionForm" for="MdPConfirm">Confirmer Mot de Passe</label>
         <input class="InscriptionInput" type="password" id="motdepasseC" name="MdPConfirm" required>

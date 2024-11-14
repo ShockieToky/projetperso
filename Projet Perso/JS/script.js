@@ -1,3 +1,5 @@
+// Script Formulaire
+
 let user = null;
 
 document.querySelector('#FormInscription').addEventListener('submit', function(event) {
@@ -14,8 +16,9 @@ document.querySelector('#FormInscription').addEventListener('submit', function(e
         return;
     }
 
-    user = { firstName, lastName, email, tel }; // Simuler l'enregistrement
+    user = { firstName, lastName, email, tel };
     document.getElementById('FormInscription').style.display = 'none';
+    window.location.href="../accueil.html";
 });
 
 document.querySelector('#redirectionconnexion').addEventListener('click', function() {
@@ -27,3 +30,26 @@ document.querySelector('#redirectioninscription').addEventListener('click', func
     document.getElementById("FormInscription").classList.remove("Hidden");
     document.getElementById("FormConnexion").classList.add("Hidden");
 });
+
+// JS Soumission anecdote
+
+function doSomething(obj){
+    var valeur = obj.options[obj.selectedIndex].value;
+
+    if (valeur == "Culture") {
+        document.getElementById("test").classList.remove("Sports");
+        document.getElementById("test").classList.remove("Animaux");
+        document.getElementById("test").classList.add("Culture");
+    }
+    if (valeur == "Sport") {
+        document.getElementById("test").classList.add("Sports");
+        document.getElementById("test").classList.remove("Animaux");
+        document.getElementById("test").classList.remove("Culture");
+    }
+    if (valeur == "Animaux") {
+        document.getElementById("test").classList.remove("Sports");
+        document.getElementById("test").classList.add("Animaux");
+        document.getElementById("test").classList.remove("Culture");
+    }
+    obj.selectedIndex = 0;
+}
