@@ -2,7 +2,7 @@
 
 let user = null;
 
-document.querySelector('#FormInscription').addEventListener('submit', function(event) {
+document.querySelector('#FormInscription').addEventListener('submit', function (event) {
     event.preventDefault();
     const firstName = document.getElementById('prenom').value;
     const lastName = document.getElementById('nom').value;
@@ -18,38 +18,42 @@ document.querySelector('#FormInscription').addEventListener('submit', function(e
 
     user = { firstName, lastName, email, tel };
     document.getElementById('FormInscription').style.display = 'none';
-    window.location.href="../accueil.html";
+    window.location.href = "../accueil.html";
 });
 
-document.querySelector('#redirectionconnexion').addEventListener('click', function() {
+document.querySelector('#redirectionconnexion').addEventListener('click', function () {
     document.getElementById("FormInscription").classList.add("Hidden");
     document.getElementById("FormConnexion").classList.remove("Hidden");
 });
 
-document.querySelector('#redirectioninscription').addEventListener('click', function() {
+document.querySelector('#redirectioninscription').addEventListener('click', function () {
     document.getElementById("FormInscription").classList.remove("Hidden");
     document.getElementById("FormConnexion").classList.add("Hidden");
 });
 
 // JS Soumission anecdote
 
-function doSomething(obj){
+function doSomething(obj) {
     var valeur = obj.options[obj.selectedIndex].value;
 
+    if (valeur == "basique") {
+        document.getElementById("chgmnt").classList.remove("Sports");
+        document.getElementById("chgmnt").classList.remove("Animaux");
+        document.getElementById("chgmnt").classList.remove("Culture");
+    }
     if (valeur == "Culture") {
-        document.getElementById("test").classList.remove("Sports");
-        document.getElementById("test").classList.remove("Animaux");
-        document.getElementById("test").classList.add("Culture");
+        document.getElementById("chgmnt").classList.remove("Sports");
+        document.getElementById("chgmnt").classList.remove("Animaux");
+        document.getElementById("chgmnt").classList.add("Culture");
     }
     if (valeur == "Sport") {
-        document.getElementById("test").classList.add("Sports");
-        document.getElementById("test").classList.remove("Animaux");
-        document.getElementById("test").classList.remove("Culture");
+        document.getElementById("chgmnt").classList.add("Sports");
+        document.getElementById("chgmnt").classList.remove("Animaux");
+        document.getElementById("chgmnt").classList.remove("Culture");
     }
     if (valeur == "Animaux") {
-        document.getElementById("test").classList.remove("Sports");
-        document.getElementById("test").classList.add("Animaux");
-        document.getElementById("test").classList.remove("Culture");
+        document.getElementById("chgmnt").classList.remove("Sports");
+        document.getElementById("chgmnt").classList.add("Animaux");
+        document.getElementById("chgmnt").classList.remove("Culture");
     }
-    obj.selectedIndex = 0;
 }

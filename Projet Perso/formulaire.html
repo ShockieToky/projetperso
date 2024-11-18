@@ -8,13 +8,14 @@
 </head>
 <body>
     <div class="bodyidentification">
-    <div class="accueil">
+    <div class="btnaccueil">
         <button id="retour" onclick="window.location.href='/accueil.html';">Retour Accueil </button>
     </div>
     <div class="containerForm">
-    <h1>Identification</h1>
+    <h1 class="titre">Identification</h1>
     <!-- Formulaire de connexion -->
     <form id="FormConnexion">
+        <h2>connexion</h2>
         <label class="ConnexionForm" for="Mail">Adresse Mail:</label>
         <input class="ConnexionInput" type="email" id="mail" name="Mail" required>
 
@@ -29,6 +30,7 @@
     </form>
     <!-- Formulaire d'inscription -->
     <form class="Hidden" id="FormInscription">
+        <h2>inscription</h2>
         <label class="InscriptionForm" for="Prénom">Prénom:</label>
         <input class="InscriptionInput" type="text" id="prenom" name="Prénom" required>
 

@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soumettre Anecdote</title>
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
+
 <body>
-    <div id="test" class="bodysub Culture">
+    <div id="chgmnt" class="bodysub">
+        <div class="btnaccueil">
+            <button id="retour" onclick="window.location.href='/accueil.html';">Retour Accueil </button>
+        </div>
         <div class="containerSub">
-            <h1>soumettre une anecdote</h1>
+            <h1 class="titre">soumettre une anecdote</h1>
             <form id="FormSub">
                 <label class="SubForm" for="Catégories">Catégorie de la requête</label>
-                <select name="Catégories" class="SubSelect" onchange="doSomething(this)">
+                <select name="Catégories" class="SubSelect" onchange="doSomething(this)" required>
+                    <option value="basique">Choix catégorie</option>
                     <option value="Culture">Culture</option>
                     <option value="Sport">Sport</option>
                     <option value="Animaux">Animaux</option>
                 </select>
 
                 <label class="SubForm" for="Anecdote">Votre anecdote:</label>
-                <textarea name="Anecdote" id="anecdote"></textarea>
+                <textarea name="Anecdote" id="anecdote" required></textarea>
 
-                <input class="SubInput" type="text" id="source" name="Source" placeholder="votre source ici">
+                <input class="SubInput" type="text" id="source" name="Source" placeholder="votre source ici" required>
 
                 <input class="bouton" type="submit" id="request" value="valider">
             </form>
@@ -29,4 +35,5 @@
     </div>
     <script src="./JS/script.js"></script>
 </body>
+
 </html>
