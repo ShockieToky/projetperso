@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +9,18 @@
 <body>
     <div class="bodyidentification">
     <div class="btnaccueil">
-        <button id="retour" onclick="window.location.href='/accueil.html';">Retour Accueil </button>
+        <button id="retour" onclick="window.location.href='./accueil.html';">Retour Accueil </button>
     </div>
     <div class="containerForm">
     <h1 class="titre">Identification</h1>
     <!-- Formulaire de connexion -->
-    <form id="FormConnexion">
+    <form method="POST" action="connexion.php" id="FormConnexion">
         <h2>connexion</h2>
         <label class="ConnexionForm" for="Mail">Adresse Mail:</label>
-        <input class="ConnexionInput" type="email" id="mail" name="Mail" required>
+        <input class="ConnexionInput" type="email" id="email" name="Mail" required>
 
         <label class="ConnexionForm" for="Mot de Passe">Mot de passe:</label>
-        <input class="ConnexionInput" type="password" id="mdp" name="Mot de Passe" required>
+        <input class="ConnexionInput" type="password" id="motdepasse1" name="Mot de Passe" required>
         
         <div class="boutonform">
             <input class="bouton" type="submit" id="connexion" value="connexion">
@@ -29,7 +29,7 @@
         </div>
     </form>
     <!-- Formulaire d'inscription -->
-    <form class="Hidden" id="FormInscription">
+    <form method="POST" action="inscription.php" class="Hidden" id="FormInscription">
         <h2>inscription</h2>
         <label class="InscriptionForm" for="Prénom">Prénom:</label>
         <input class="InscriptionInput" type="text" id="prenom" name="Prénom" required>

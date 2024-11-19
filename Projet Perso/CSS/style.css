@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("/src/test.png");
+    background-image: url("../img/test.png");
 }
 
 .titre {
@@ -112,19 +112,19 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("/src/mountains-5544365_1920.jpg");
+    background-image: url("../img/mountains-5544365_1920.jpg");
 }
 
 .Culture {
-    background-image: url("/src/chichen-itza-7861103_1920.jpg");
+    background-image: url("../img/chichen-itza-7861103_1920.jpg");
 }
 
 .Animaux {
-    background-image: url("/src/lemurs-1010643_1920.jpg");
+    background-image: url("../img/lemurs-1010643_1920.jpg");
 }
 
 .Sports {
-    background-image: url("/src/stadium-4181150_1920.jpg");
+    background-image: url("../img/stadium-4181150_1920.jpg");
 }
 
 .containerSub {
@@ -186,14 +186,14 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("/src/test5.png");
+    background-image: url("../img/test5.png");
 }
 
 .titresite {
     font-size: 50px;
     color: azure;
     width: auto;
-    background-image: url("/src/headeracc.png");
+    background-image: url("../img/headeracc.png");
 }
 
 .flexcorps {
@@ -212,7 +212,7 @@ h2 {
     border: 3px solid #ffcc80;
     border-radius: 5px;
     width: 150px;
-    background-image: url("/src/redirectionsite.png");
+    background-image: url("../img/redirectionsite.png");
 }
 
 .listesite {
@@ -254,5 +254,5 @@ h2 {
     background-color: antiquewhite;
     font-size: 18px;
     width: 150px;
-    background-image: url("/src/depression.png");
+    background-image: url("../img/depression.png");
 }

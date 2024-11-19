@@ -1,25 +1,27 @@
 // Script Formulaire
 
-let user = null;
+// let user = null;
 
-document.querySelector('#FormInscription').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const firstName = document.getElementById('prenom').value;
-    const lastName = document.getElementById('nom').value;
-    const email = document.getElementById('email').value;
-    const tel = document.getElementById('telephone').value;
-    const password = document.getElementById('motdepasse').value;
-    const confirmPassword = document.getElementById('motdepasseC').value;
+// document.querySelector('#FormInscription').addEventListener('submit', function (event) {
+//     event.preventDefault();
+//     const firstName = document.getElementById('prenom').value;
+//     const lastName = document.getElementById('nom').value;
+//     const email = document.getElementById('email').value;
+//     const tel = document.getElementById('telephone').value;
+//     const password = document.getElementById('motdepasse').value;
+//     const confirmPassword = document.getElementById('motdepasseC').value;
 
-    if (password !== confirmPassword) {
-        document.getElementById('message').textContent = 'Les mots de passe ne correspondent pas.';
-        return;
-    }
+    // if (password !== confirmPassword) {
+    //     document.getElementById('message').textContent = 'Les mots de passe ne correspondent pas.';
+    //     return;
+    // }
 
-    user = { firstName, lastName, email, tel };
-    document.getElementById('FormInscription').style.display = 'none';
-    window.location.href = "../accueil.html";
-});
+//     user = { firstName, lastName, email, tel };
+//     document.getElementById('FormInscription').style.display = 'none';
+//     // window.location.href = "../accueil.html";
+// });
+
+// Script pour changer entre le formulaire de connexion et d'inscription
 
 document.querySelector('#redirectionconnexion').addEventListener('click', function () {
     document.getElementById("FormInscription").classList.add("Hidden");
