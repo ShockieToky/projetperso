@@ -1,6 +1,6 @@
 <?php
 // Fonction pour rechercher un nom et mdp dans un fichier txt
-function rechercheInscription($fichier, $mailRechercher, $mdpRechercher) {
+function rechercheInscription($fichier, $emailRechercher, $mdpRechercher) {
     // Ouvrir en lecture le contenu du fichier
     $lecture = fopen($fichier, 'r');
 	// Vérifier si le fichier existe
@@ -12,7 +12,7 @@ function rechercheInscription($fichier, $mailRechercher, $mdpRechercher) {
 	// Lit le fichier ligne par ligne
 	while (($ligne = fgets($lecture)) !== false) {
 		// Vérifier si le nom et prénom spécifiés sont présents dans la ligne
-		if (strpos($ligne, $mailRechercher) !== false && strpos($ligne, $mdpRechercher) !== false) {
+		if (strpos($ligne, $emailRechercher) !== false && strpos($ligne, $mdpRechercher) !== false) {
 			$resultats[] = $ligne; // Ajouter à la liste des résultats
 		}
 	}
@@ -24,10 +24,10 @@ function rechercheInscription($fichier, $mailRechercher, $mdpRechercher) {
 
 // Utilisation de la fonction "rechercheInscription"
 $fichier = 'inscription.txt'; // Le fichier contenant les ...
-$mailRechercher = $_POST['Email']; // Nom à rechercher
+$emailRechercher = $_POST['Email']; // Nom à rechercher
 $mdpRechercher = $_POST['MdP']; // MdP à rechercher
 
-$resultats = rechercheInscription($fichier, $mailRechercher, $mdpRechercher);
+$resultats = rechercheInscription($fichier, $emailRechercher, $mdpRechercher);
 
 // transmettre les résultats
 if (empty($resultats)) {

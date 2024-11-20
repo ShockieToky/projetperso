@@ -160,6 +160,7 @@ h2 {
     resize: none;
     font-size: 14px;
     border: 5px double grey;
+    box-shadow: inset 25px 15px 25px 0px rgba(0,0,0,0.1),inset -25px -15px 25px 0px rgba(0,0,0,0.1);
 }
 
 #source {
@@ -186,14 +187,19 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("../img/test5.png");
+    background-color: #00ffff;
+    opacity: 0.8;
+    background-image: radial-gradient(circle at center center, #ffffff, #00ffff), repeating-radial-gradient(circle at center center, #ffffff, #ffffff, 10px, transparent 20px, transparent 10px);
+    background-blend-mode: multiply;
 }
 
 .titresite {
     font-size: 50px;
     color: azure;
     width: auto;
-    background-image: url("../img/headeracc.png");
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 100%);
+    box-shadow: inset 25px 15px 20px 0px rgba(193, 195, 255, 0.5),inset -25px -15px 20px 0px rgba(34, 38, 155, 0.5);
 }
 
 .flexcorps {
@@ -207,12 +213,10 @@ h2 {
 .panneaugauche {
     flex-grow: 1;
     text-align: left;
-    background-color: #008cff;
-    font-size: 25px;
-    border: 3px solid #ffcc80;
-    border-radius: 5px;
+    font-size: 19px;
     width: 150px;
-    background-image: url("../img/redirectionsite.png");
+    background-color: rgb(227, 169, 245);
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
 .listesite {
@@ -220,7 +224,7 @@ h2 {
 }
 
 .lignesite {
-    padding: 15px;
+    padding: 14px;
 }
 
 .panneaumilieu {
@@ -228,10 +232,111 @@ h2 {
     order: 0;
     border: 3px solid #ffcc80;
     border-radius: 5px;
-    background: linear-gradient(82deg, #000000, #ed7b8a, #a11d2d, #ff011f);
-    background-size: 240% 240%;
-    animation: gradient-animation 28s ease infinite;
+    --sz: 14px;
+    --c1: #97c3d7;
+    --c2: #789cad;
+    --c3: #607D8B;
+    --c4: #445a65;
+    --ts: 50% / calc(var(--sz)* 20) calc(var(--sz)* 20);
+    background:
+      conic-gradient(from 0deg at calc(500%/6) calc(100%/3),#000000 0 120deg,#0000 0),
+      conic-gradient(from -120deg at calc(100%/6) calc(100%/3),#939393 0 120deg,#0000 0),
+      conic-gradient(from 120deg at calc(100%/3) calc(500%/6),#ffffff 0 120deg,#0000 0),
+      conic-gradient(from 120deg at calc(200%/3) calc(500%/6),#ffffff 0 120deg,#0000 0),
+      conic-gradient(from -180deg at calc(100%/3) 50%,#939393  60deg,#ffffff 0 120deg,#0000 0),
+      conic-gradient(from 60deg at calc(200%/3) 50%,#ffffff  60deg,#000000 0 120deg,#0000 0),
+      conic-gradient(from -60deg at 50% calc(100%/3),#ffffff 120deg,#939393 0 240deg,#000000 0);
+    background-size: 111px 64px;
 }
+
+.AnecdoteJour{
+    margin-top: 15px;
+    width: 1000px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    border: 6px double gold;
+    animation: scroll 100s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+      #111111;
+    color: #eee;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+  }
+  
+  @keyframes scroll {
+    100% {
+      background-position: 0px -400%;
+    }
+  }
+  
+  /* Fallback if the operatring system prefers reduced motion*/
+  @media (prefers-reduced-motion) {
+    .wrapper {
+      animation: scroll 800s linear infinite;
+    }
+  }
+  
+  @media (min-width: 670px) {
+    .title {
+      font-size: 5rem;
+    }
+  }
+
+
+.TitreT{
+    font-size: 22px;
+    color: #00ffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.AnecdoteT{
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+
+.AnecdoteCulture{
+    background-color: black;
+    width: 1000px;
+    margin-left: 5%;
+    height: 145px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 16px;
+    border: 3px solid gold;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.AnecdoteSport{
+    background-color: black;
+    width: 1000px;
+    margin-left: 5%;
+    height: 145px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 16px;
+    border: 3px solid gold;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.AnecdoteAnimaux{
+    background-color: black;
+    width: 1000px;
+    margin-left: 5%;
+    height: 145px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 16px;
+    border: 3px solid gold;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
 
 @keyframes gradient-animation {
     0% {
@@ -249,10 +354,20 @@ h2 {
 
 .panneaudroite {
     flex-grow: 1;
-    border: 3px solid #ffcc80;
-    border-radius: 5px;
-    background-color: antiquewhite;
     font-size: 18px;
     width: 150px;
-    background-image: url("../img/depression.png");
+    background: #e3a9f5;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+a:link{
+    color: #8994f7;
+}
+
+a:visited{
+    color: #ffffff;
+}
+
+a:hover{
+    color: pink;
 }

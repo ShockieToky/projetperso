@@ -1,37 +1,28 @@
-// Script Formulaire
-
-// let user = null;
-
-// document.querySelector('#FormInscription').addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     const firstName = document.getElementById('prenom').value;
-//     const lastName = document.getElementById('nom').value;
-//     const email = document.getElementById('email').value;
-//     const tel = document.getElementById('telephone').value;
-//     const password = document.getElementById('motdepasse').value;
-//     const confirmPassword = document.getElementById('motdepasseC').value;
-
-    // if (password !== confirmPassword) {
-    //     document.getElementById('message').textContent = 'Les mots de passe ne correspondent pas.';
-    //     return;
-    // }
-
-//     user = { firstName, lastName, email, tel };
-//     document.getElementById('FormInscription').style.display = 'none';
-//     // window.location.href = "../accueil.html";
-// });
-
 // Script pour changer entre le formulaire de connexion et d'inscription
 
+if(document.querySelector('#redirectionconnexion')) {
 document.querySelector('#redirectionconnexion').addEventListener('click', function () {
     document.getElementById("FormInscription").classList.add("Hidden");
     document.getElementById("FormConnexion").classList.remove("Hidden");
-});
+});}
 
+if(document.querySelector('#redirectioninscription')) {
 document.querySelector('#redirectioninscription').addEventListener('click', function () {
     document.getElementById("FormInscription").classList.remove("Hidden");
     document.getElementById("FormConnexion").classList.add("Hidden");
-});
+});}
+
+function checkPwd() {
+    const password = document.getElementById('motdepasse').value;
+    const confirmPassword = document.getElementById('motdepasseC').value;
+    const messageElement = document.getElementById('message');
+    if (password !== confirmPassword) {
+        event.preventDefault(); // Empêche le formulaire de soumettre
+        messageElement.textContent = "Les mots de passe ne correspondent pas. Veuillez réessayer.";
+    } else {
+        messageElement.textContent = ""; // Réinitialiser le message
+    }
+}
 
 // JS Soumission anecdote
 
@@ -59,3 +50,6 @@ function doSomething(obj) {
         document.getElementById("chgmnt").classList.remove("Culture");
     }
 }
+
+// Script accueil
+

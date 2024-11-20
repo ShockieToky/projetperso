@@ -15,7 +15,7 @@
         </div>
         <div class="containerSub">
             <h1 class="titre">soumettre une anecdote</h1>
-            <form id="FormSub">
+            <form method="POST" action="requete.php" id="FormSub">
                 <label class="SubForm" for="Catégories">Catégorie de la requête</label>
                 <select name="Catégories" class="SubSelect" onchange="doSomething(this)" required>
                     <option value="basique">Choix catégorie</option>
@@ -27,7 +27,7 @@
                 <label class="SubForm" for="Anecdote">Votre anecdote:</label>
                 <textarea name="Anecdote" id="anecdote" required></textarea>
 
-                <input class="SubInput" type="text" id="source" name="Source" placeholder="votre source ici" required>
+                <input class="SubInput" type="text" id="source" name="Source" placeholder="votre source ici" pattern="http(s?)(:\/\/)((www.)?)(([^.]+)\.)?([a-zA-z0-9\-_]+)(.com|.net|.gov|.org|.in|.fr)(\/[^\s]*)" required>
 
                 <input class="bouton" type="submit" id="request" value="valider">
             </form>

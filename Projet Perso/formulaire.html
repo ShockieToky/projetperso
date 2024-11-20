@@ -17,10 +17,10 @@
     <form method="POST" action="connexion.php" id="FormConnexion">
         <h2>connexion</h2>
         <label class="ConnexionForm" for="Mail">Adresse Mail:</label>
-        <input class="ConnexionInput" type="email" id="email" name="Mail" required>
+        <input class="ConnexionInput" type="email" id="email" name="Email" required>
 
-        <label class="ConnexionForm" for="Mot de Passe">Mot de passe:</label>
-        <input class="ConnexionInput" type="password" id="motdepasse1" name="Mot de Passe" required>
+        <label class="ConnexionForm" for="MdP">Mot de passe:</label>
+        <input class="ConnexionInput" type="password" id="motdepasse1" name="MdP" required>
         
         <div class="boutonform">
             <input class="bouton" type="submit" id="connexion" value="connexion">
@@ -41,7 +41,7 @@
         <input class="InscriptionInput" type="tel" id="telephone" name="Téléphone" pattern="[0-9]{10}">
 
         <label class="InscriptionForm" for="Email">Adresse Mail:</label>
-        <input class="InscriptionInput" type="email" id="email" name="Email" placeholder="exemple@exemple.com" required>
+        <input class="InscriptionInput" type="email" id="email" name="Email" placeholder="exemple@exemple.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
 
         <label class="InscriptionForm" for="MdP">Mot de Passe (8 caractères minimum)</label>
         <input class="InscriptionInput" type="password" id="motdepasse" name="MdP" minlength="8" required>
@@ -50,7 +50,7 @@
         <input class="InscriptionInput" type="password" id="motdepasseC" name="MdPConfirm" required>
 
         <div class="boutonform">
-            <input class="bouton" type="submit" id="inscription" value="inscription">
+            <input onclick="checkPwd()" class="bouton" type="submit" id="inscription" value="inscription">
 
             <input class="bouton" type="button" id="redirectionconnexion" value="connexion">
         </div>
