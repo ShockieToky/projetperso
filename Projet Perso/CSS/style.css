@@ -37,6 +37,18 @@ h2 {
     margin-right: 95%;
 }
 
+#retour{
+    border: none;
+    background: none;
+    color: #000000;
+    border: 2px solid #1C6EA4;
+    border-radius: 40px;
+}
+
+#retour:hover{
+    cursor: pointer;
+}
+
 .containerForm {
     max-width: 400px;
     margin: auto;
@@ -189,17 +201,23 @@ h2 {
     bottom: 0;
     background-color: #00ffff;
     opacity: 0.8;
-    background-image: radial-gradient(circle at center center, #ffffff, #00ffff), repeating-radial-gradient(circle at center center, #ffffff, #ffffff, 10px, transparent 20px, transparent 10px);
-    background-blend-mode: multiply;
+    background: 
+      radial-gradient(calc(1.28*32px + 12px/2) at left 50% bottom calc(-.8*32px),#00d9ff calc(100% - 12px),#ffffff calc(101% - 12px) 100%,#0000 101%) calc(2*32px) calc(-1*calc(1.5*32px + 12px)),
+      radial-gradient(calc(1.28*32px + 12px/2) at left 50% bottom calc(-.8*32px),#297ccb calc(100% - 12px),#ffffff calc(101% - 12px) 100%,#0000 101%) calc(-1*32px) calc(calc(1.5*32px + 12px)/-2),
+      radial-gradient(calc(1.28*32px + 12px/2) at left 50% top    calc(-.8*32px),#297ccb calc(100% - 12px),#ffffff calc(101% - 12px) 100%,#0000 101%) 0 calc(1.5*32px + 12px),
+      radial-gradient(calc(1.28*32px + 12px/2) at left 50% top    calc(-.8*32px),#00d9ff calc(100% - 12px),#ffffff calc(101% - 12px) 100%,#0000 101%) 32px calc(calc(1.5*32px + 12px)/ 2),
+      linear-gradient(#00d9ff 50%,#297ccb 0);
+    background-size: calc(4*32px) calc(1.5*32px + 12px);
 }
 
 .titresite {
     font-size: 50px;
-    color: azure;
+    color: rgb(255, 255, 255);
     width: auto;
     background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 100%);
+    background: radial-gradient(circle, rgb(4, 245, 253) 0%, rgb(100, 8, 143) 50%, rgb(9, 57, 216) 100%);
     box-shadow: inset 25px 15px 20px 0px rgba(193, 195, 255, 0.5),inset -25px -15px 20px 0px rgba(34, 38, 155, 0.5);
+    text-shadow: 5px 5px 4px rgba(125, 135, 255, 1);
 }
 
 .flexcorps {
@@ -215,7 +233,8 @@ h2 {
     text-align: left;
     font-size: 19px;
     width: 150px;
-    background-color: rgb(227, 169, 245);
+    background-color: rgb(65, 227, 248);
+    border-radius: 10%;
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
@@ -356,7 +375,8 @@ h2 {
     flex-grow: 1;
     font-size: 18px;
     width: 150px;
-    background: #e3a9f5;
+    background: rgb(65, 227, 248);
+    border-radius: 10%;
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
@@ -370,4 +390,10 @@ a:visited{
 
 a:hover{
     color: pink;
+}
+
+#FooterAcc{
+    background-color: #ffffff;
+    height: 75px;
+    box-shadow: inset 0px 0px 15px 15px rgb(12, 80, 226);
 }

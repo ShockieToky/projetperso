@@ -29,8 +29,9 @@
 
                 <input class="SubInput" type="text" id="source" name="Source" placeholder="votre source ici" pattern="http(s?)(:\/\/)((www.)?)(([^.]+)\.)?([a-zA-z0-9\-_]+)(.com|.net|.gov|.org|.in|.fr)(\/[^\s]*)" required>
 
-                <input class="bouton" type="submit" id="request" value="valider">
+                <input onclick="checkCategorie(this)" class="bouton" type="submit" id="request" value="valider">
             </form>
+            <div id="messageC"></div>
         </div>
     </div>
     <script src="./JS/script.js"></script>

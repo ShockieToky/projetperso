@@ -53,3 +53,11 @@ function doSomething(obj) {
 
 // Script accueil
 
+function playsound(){
+    document.querySelector("#FooterAcc").addEventListener("click", play);
+}
+function play() {
+    var audio = document.getElementById("audio");
+    audio.volume = 0.2;
+    audio.play();
+}
